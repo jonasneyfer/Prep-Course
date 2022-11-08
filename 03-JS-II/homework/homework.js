@@ -149,10 +149,10 @@ function operadoresLogicos(num1, num2, num3) {
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   if (num1===0||num2===0||num3===0){
     return ("Error")
-  } else if (num1>num2&&num1>num3&&num1>0){
-    return ("Número 1 es mayor y positivo")
   } else if (num1<0||num2<0||num3<0){
     return ("Hay negativos")
+  } else if (num1>num2&&num1>num3&&num1>0){
+    return ("Número 1 es mayor y positivo")
   } else if (num3>num2&&num3>num1){
     return ++num3
   } else {
@@ -190,21 +190,43 @@ function esVerdadero(valor){
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí   
-  
+  //Escribe tu código aquí 
+  let resultado=[]  
+  for(let i=0;i<=10;i++){
+     resultado.push(i*6);
+   }
+   return resultado
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
+  var iCantidad = 0;
+  var iTemp = numero;
+      
+  while (iTemp>=1){
+  iTemp = iTemp/10;
+  iCantidad++;
+  } if (Number.isInteger(numero) && iCantidad === 3){
+  return true
+  } else {
+  return false
+  }
   
-}
+}   
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-}
+  var i = numero
+  var ciclo=0
+      do {
+      i=i+5
+      ciclo++
+      } while (ciclo < 8) 
+      return (i)
+  }    
 
 
 // No modificar nada debajo de esta línea
